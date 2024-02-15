@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Sixtyfour&display=swap');
+ :root{
+    --color-1:#3d78cb;
+    --color-2:#1e212d;  
+    --color-3:#27282d;
+    --box-shadow:0px 0px 30px #3d78cb9f;
+
+
+ }
+ 
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sixtyfour", sans-serif;
+} 
+body {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    background-color: var(--color-2);
+
+}
+
+header{
+    grid-area: 1/1/2/2;
+    margin: 10px auto;
+}
+h1{
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-top: 2rem;
+  color: var(--color-1);
+  
+  
+}
+
+
+main {
+    grid-area: 2/1/3/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.container{
+  background-color: var(--color-3);
+  padding: 1.5rem;
+  border-radius: 10px ;
+  box-shadow: var(--box-shadow)
+
+}
+ .gridContainer {
+    display: grid;
+    width: 60vh;
+    height: 60vh;
+    position: absolute;
+    background-color: white;
+    position: relative;
+    
+   
+} 
+
+
+.buttons{
+  width: 18rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow)
+
+}
+.btn{
+   width: 200px;
+    height: 50px;
+    border: 2px solid var(--color-1);
+    border-radius:  10px;
+    background-color:transparent;
+    color: var(--color-1);
+    font-size:1rem;
+    cursor: pointer;
+}
+.btn:hover{
+  width: 210px;
+  height: 55px;
+  transition-duration: 0.2s;
+}
+.btn:focus{
+  color: #ffffff;
+  background-color: var(--color-1);
+  
+}
+
+
+#colorPicker{
+  appearance: none;
+  height: 60px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+#colorPicker::-webkit-color-swatch{
+  border-radius: 10px;
+  border: none;
+}
+#colorPicker::-moz-color-swatch{
+  border-radius: 10px;
+  border: none;
+}
+
+
+#sliderValue{
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    
+}
+
+/* Styling the range input */
+input[type=range] {
+    appearance: none; 
+    width: 200px;
+    height: 5px;
+    background: linear-gradient(to right, #002366, #0056b3);
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  /* Styling the thumb */
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 2px solid #0056b3; /* matching the lighter color in the gradient */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 2px solid #0056b3; /* matching the lighter color in the gradient */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type=range]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border: 2px solid #0056b3; /* matching the lighter color in the gradient */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  input[type=color]{
+    appearance: none;
+  }
+
+ 
